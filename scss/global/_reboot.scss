@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background-color: $white;
+	background-color: $grey-main;
 	color: $main;
 	font-weight: 500;
 	display: flex;
@@ -37,7 +37,7 @@ img {
 }
 
 a {
-	// color: $main;
+	color: $main;
 	text-decoration: none;
 }
 

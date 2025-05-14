@@ -1,0 +1,39 @@
+.main-link {
+	$root: &;
+
+	@include flexCenter(row, center, unset);
+
+	&__pink,
+	&__c,
+	&__hicken {
+		transition: color $transition-300;
+	}
+
+	&__pink {
+		color: $pink;
+	}
+
+	&:hover,
+	&:focus-visible {
+		#{$root}__c,
+		#{$root}__hicken {
+			color: $pink;
+		}
+	}
+
+	&--footer {
+		color: $grey;
+
+		&:hover,
+		&:focus-visible {
+			#{$root}__pink {
+				color: $pink;
+			}
+
+			#{$root}__c,
+			#{$root}__hicken {
+				color: $main;
+			}
+		}
+	}
+}

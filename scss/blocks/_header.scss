@@ -1,0 +1,106 @@
+.header {
+	padding: 2.06rem 0 2.06rem;
+
+	@media (max-width: $vp-tablet) {
+		padding: 1.7rem 0 1.87rem;
+	}
+
+	&__main {
+		@include flexCenter(row, center, space-between);
+		gap: 0.62rem;
+
+		@media (max-width: 43.75rem) {
+			flex-direction: column;
+			gap: 0.75rem;
+			align-items: flex-start;
+			justify-content: unset;
+		}
+	}
+
+	&__user-block,
+	&__user-info-block {
+		@include flexCenter(row, center, unset);
+		gap: 1.62rem;
+
+		@media (max-width: $vp-tablet) {
+			gap: 1.25rem;
+		}
+
+		@media (max-width: 47.68rem) {
+			gap: 1vw;
+		}
+	}
+
+	&__user-block {
+		@media (max-width: 43.75rem) {
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+
+	&__user-info-block {
+		@media (max-width: 43.75rem) {
+			flex-direction: column-reverse;
+			align-items: flex-start;
+			gap: 0.25rem;
+		}
+	}
+
+	&__user-info-inner {
+		@include flexCenter(row, center, unset);
+		gap: 0.62rem;
+
+		@media (max-width: 43.75rem) {
+			gap: 0.25rem;
+		}
+	}
+
+	&__user-simple-text {
+		@media (min-width: 43.75rem) {
+			display: none;
+		}
+	}
+
+	&__sale-percent,
+	&__user {
+		padding: 0.5rem;
+		border-radius: 50%;
+		width: 2.5rem;
+		height: 2.5rem;
+		background-color: $pink;
+		color: $white;
+
+		@media (max-width: 43.75rem) {
+			display: none;
+		}
+	}
+
+	&__user-sale-text,
+	&__user-name-text {
+		font-weight: 600;
+		font-size: $rem-112;
+		line-height: 100%;
+		color: $main;
+
+		@media (max-width: $vp-tablet) {
+			font-size: $rem-1;
+		}
+	}
+
+	@media (max-width: 43.75rem) {
+		&__user-sale-text,
+		&__user-simple-text {
+			color: $grey-faded;
+			font-size: $rem-075;
+		}
+	}
+
+	&__login-block {
+		@include flexCenter(row, center, unset);
+		gap: 0.75rem;
+
+		@media (max-width: 47.68rem) {
+			gap: 0.31rem;
+		}
+	}
+}
