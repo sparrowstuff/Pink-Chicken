@@ -1,0 +1,58 @@
+.files-menu {
+	@include flexStart;
+	gap: 1.87rem;
+	width: 100%;
+	$root: &;
+
+	@media (max-width: 48rem) {
+		flex-direction: row;
+	}
+
+	&__media,
+	&__report {
+		@include flexStart;
+		gap: 0.87rem;
+		width: 100%;
+	}
+
+	// &__heading {
+	// 	@include flexCenter(row, center, space-between);
+	// 	gap: 0.62rem;
+	// 	width: 100%;
+	// }
+
+	&__open-btn {
+		@include flexCenter(row, center, space-between);
+		gap: 0.62rem;
+		width: 100%;
+		#{$root}__open-icon {
+			transform: rotate(180deg);
+			transition: transform $transition-300, scale $transition-300;
+		}
+
+		&:hover,
+		&:focus-visible {
+			#{$root}__btn-text {
+				color: $pink;
+			}
+
+			#{$root}__open-icon {
+				scale: 1.2;
+			}
+		}
+	}
+
+	&__btn-text {
+		font-weight: 600;
+		font-size: $rem-112;
+		line-height: 100%;
+		color: $main;
+		transition: color $transition-300;
+	}
+
+	&__open-btn-rotate {
+		#{$root}__open-icon {
+			transform: rotate(0);
+		}
+	}
+}

@@ -1,0 +1,45 @@
+.aside-menu {
+	border-radius: 1.25rem;
+	min-height: 44.31rem;
+	background-color: $white;
+	box-shadow: 0rem 0rem 1.87rem 0rem $main-08;
+	max-width: 18.43rem;
+
+	@media (max-width: 48rem) {
+		max-width: unset;
+		width: 100%;
+		min-height: unset;
+	}
+
+	&__main {
+		padding: 1.75rem 1.31rem 3.12rem 1.25rem;
+		@include flexStart;
+		gap: 1.87rem;
+
+		@media (max-width: 48rem) {
+			gap: 1.25rem;
+			// width: 100%;
+		}
+	}
+
+	&__empty {
+		@include flexCenter;
+		gap: 1.87rem;
+
+		@media (max-width: 48rem) {
+			flex-direction: row;
+		}
+	}
+
+	&__empty-text {
+		font-weight: 500;
+		// font-size: $rem-1;
+		line-height: 145%;
+		text-align: center;
+
+		@media (max-width: 48rem) {
+			text-align: left;
+			max-width: 15.93rem;
+		}
+	}
+}

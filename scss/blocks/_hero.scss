@@ -1,0 +1,13 @@
+.hero {
+	padding: 0 0 3.75rem;
+
+	&__main {
+		@include flexCenter(row);
+		gap: 1.87rem;
+
+		@media (max-width: $vp-tablet) {
+			flex-direction: column;
+			gap: 1.25rem;
+		}
+	}
+}

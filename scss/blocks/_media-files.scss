@@ -1,0 +1,67 @@
+.media-files {
+	@include flexStart;
+	gap: 0.75rem;
+	width: 100%;
+	transition: opacity $transition-300, clip-path $transition-300;
+
+	&__list {
+		@include flexStart;
+		gap: 0.5rem;
+		width: 100%;
+	}
+
+	&__item {
+		@include flexStart;
+		width: 100%;
+		gap: 0.5rem;
+	}
+
+	&__inner {
+		@include flexCenter(row, center, space-between);
+		gap: 0.62rem;
+		width: 100%;
+		background-color: $grey-main;
+		border-radius: 0.25rem;
+	}
+
+	&__heading {
+		@include flexCenter(row);
+		gap: 0.56rem;
+		padding: 0.56rem 1.25rem 0.56rem 0.56rem;
+	}
+
+	&__company {
+		font-size: $rem-093;
+		line-height: 135%;
+	}
+
+	&__current-plan {
+		@include flexCenter(row);
+		gap: 0.31rem;
+	}
+
+	&__add-file-btn {
+		margin-left: auto;
+	}
+
+	&--media {
+		// display: none;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		pointer-events: none;
+		opacity: 0;
+	}
+
+	&--report {
+		// display: none;
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		pointer-events: none;
+		opacity: 0;
+	}
+
+	&--show {
+		// display: flex;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		pointer-events: all;
+		opacity: 1;
+	}
+}

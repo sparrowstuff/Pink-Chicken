@@ -114,5 +114,354 @@
 				</div>
 			</div>
 		</header>
+		<section class="hero">
+			<h1 class="visually-hidden">Чат поддержки</h1>
+			<div class="container">
+				<div class="hero__main">
+					<aside class="aside-menu">
+						<div class="aside-menu__main">
+							<h2 class="aside-menu__title">Файлы</h2>
+							<div class="aside-menu__empty">
+								<svg
+									class="aside-menu__empty-icon"
+									width="256"
+									height="314"
+									aria-hidden="true"
+								>
+									<use xlink:href="images/sprite.svg#files-empty"></use>
+								</svg>
+								<p class="aside-menu__empty-text">
+									Закажи у&nbsp;личного помощника медиаплан. Он&nbsp;появится
+									в&nbsp;этом разделе
+								</p>
+							</div>
+							<article class="files-menu">
+								<div class="files-menu__media">
+									<button
+										class="files-menu__open-btn btn btn--transparent"
+										type="button"
+										aria-label="Открыть меню медиапланов"
+										id="filesBtn"
+									>
+										<span class="files-menu__btn-text">Медиапланы</span>
+										<svg
+											class="files-menu__open-icon"
+											width="24"
+											height="24"
+											aria-hidden="true"
+										>
+											<use xlink:href="images/sprite.svg#arrow-up"></use>
+										</svg>
+									</button>
+									<article class="media-files media-files--media">
+										<ul class="media-files__list">
+											<li class="media-files__item">
+												<div class="media-files__inner">
+													<div class="media-files__heading">
+														<svg
+															class="media-files__xml-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use xlink:href="images/sprite.svg#xml"></use>
+														</svg>
+														<div class="media-files__name">
+															<span class="media-files__company"></span>
+														</div>
+													</div>
+													<button
+														class="media-files__download-btn btn btn--faded"
+														type="button"
+														aria-label="Загрузить медиаплан"
+													>
+														<svg
+															class="btn__download-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use
+																xlink:href="images/sprite.svg#download"
+															></use>
+														</svg>
+													</button>
+												</div>
+												<span class="media-files__current-plan"
+													><svg
+														class="media-files__current-icon"
+														width="16"
+														height="16"
+														aria-hidden="true"
+													>
+														<use
+															xlink:href="images/sprite.svg#added-icon"
+														></use>
+													</svg>
+													<span class="media-files__current-text"
+														>Медиаплан от&nbsp;1.06.22 готов</span
+													>
+												</span>
+											</li>
+											<li class="media-files__item">
+												<div class="media-files__inner">
+													<div class="media-files__heading">
+														<svg
+															class="media-files__xml-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use xlink:href="images/sprite.svg#xml"></use>
+														</svg>
+														<div class="media-files__name">
+															<span class="media-files__company"></span>
+														</div>
+													</div>
+													<button
+														class="media-files__download-btn btn btn--faded"
+														type="button"
+														aria-label="Загрузить медиаплан"
+													>
+														<svg
+															class="btn__download-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use
+																xlink:href="images/sprite.svg#download"
+															></use>
+														</svg>
+													</button>
+												</div>
+											</li>
+											<li class="media-files__item">
+												<div class="media-files__inner">
+													<div class="media-files__heading">
+														<svg
+															class="media-files__xml-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use xlink:href="images/sprite.svg#xml"></use>
+														</svg>
+														<div class="media-files__name">
+															<span class="media-files__company"></span>
+														</div>
+													</div>
+													<button
+														class="media-files__download-btn btn btn--faded"
+														type="button"
+														aria-label="Загрузить медиаплан"
+													>
+														<svg
+															class="btn__download-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use
+																xlink:href="images/sprite.svg#download"
+															></use>
+														</svg>
+													</button>
+												</div>
+											</li>
+											<li class="media-files__item">
+												<div class="media-files__inner">
+													<div class="media-files__heading">
+														<svg
+															class="media-files__xml-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use xlink:href="images/sprite.svg#xml"></use>
+														</svg>
+														<div class="media-files__name">
+															<span class="media-files__company"></span>
+														</div>
+													</div>
+													<button
+														class="media-files__download-btn btn btn--faded"
+														type="button"
+														aria-label="Загрузить медиаплан"
+													>
+														<svg
+															class="btn__download-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use
+																xlink:href="images/sprite.svg#download"
+															></use>
+														</svg>
+													</button>
+												</div>
+											</li>
+										</ul>
+										<button
+											class="media-files__add-file-btn btn btn--transparent btn--add-media"
+											type="button"
+											id="addMediaBtn"
+											aria-label="Добавить медиаплан"
+										>
+											Показать еще
+										</button>
+									</article>
+								</div>
+								<div class="files-menu__report">
+									<button
+										class="files-menu__open-btn btn btn--transparent"
+										type="button"
+										aria-label="Свернуть меню отчетов"
+										id="reportBtn"
+									>
+										<span class="files-menu__btn-text">Отчеты</span>
+										<svg
+											class="files-menu__open-icon"
+											width="24"
+											height="24"
+											aria-hidden="true"
+										>
+											<use xlink:href="images/sprite.svg#arrow-up"></use>
+										</svg>
+									</button>
+									<article class="media-files media-files--report">
+										<ul class="media-files__list">
+											<li class="media-files__item">
+												<div class="media-files__inner">
+													<div class="media-files__heading">
+														<svg
+															class="media-files__xml-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use xlink:href="images/sprite.svg#xml"></use>
+														</svg>
+														<div class="media-files__name">
+															<span class="media-files__company"></span>
+														</div>
+													</div>
+													<button
+														class="media-files__download-btn btn btn--faded"
+														type="button"
+														aria-label="Загрузить медиаплан"
+													>
+														<svg
+															class="btn__download-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use
+																xlink:href="images/sprite.svg#download"
+															></use>
+														</svg>
+													</button>
+												</div>
+												<span class="media-files__current-plan"
+													><svg
+														class="media-files__current-icon"
+														width="16"
+														height="16"
+														aria-hidden="true"
+													>
+														<use
+															xlink:href="images/sprite.svg#added-icon"
+														></use>
+													</svg>
+													<span class="media-files__current-text"
+														>Отчет от&nbsp;1.06.22 готов</span
+													>
+												</span>
+											</li>
+											<li class="media-files__item">
+												<div class="media-files__inner">
+													<div class="media-files__heading">
+														<svg
+															class="media-files__xml-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use xlink:href="images/sprite.svg#xml"></use>
+														</svg>
+														<div class="media-files__name">
+															<span class="media-files__company"></span>
+														</div>
+													</div>
+													<button
+														class="media-files__download-btn btn btn--faded"
+														type="button"
+														aria-label="Загрузить медиаплан"
+													>
+														<svg
+															class="btn__download-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use
+																xlink:href="images/sprite.svg#download"
+															></use>
+														</svg>
+													</button>
+												</div>
+											</li>
+											<li class="media-files__item">
+												<div class="media-files__inner">
+													<div class="media-files__heading">
+														<svg
+															class="media-files__xml-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use xlink:href="images/sprite.svg#xml"></use>
+														</svg>
+														<div class="media-files__name">
+															<span class="media-files__company"></span>
+														</div>
+													</div>
+													<button
+														class="media-files__download-btn btn btn--faded"
+														type="button"
+														aria-label="Загрузить медиаплан"
+													>
+														<svg
+															class="btn__download-icon"
+															width="24"
+															height="24"
+															aria-hidden="true"
+														>
+															<use
+																xlink:href="images/sprite.svg#download"
+															></use>
+														</svg>
+													</button>
+												</div>
+											</li>
+										</ul>
+										<button
+											class="media-files__add-file-btn btn btn--transparent btn--add-media"
+											type="button"
+											id="addReportBtn"
+											aria-label="Добавить медиаплан"
+										>
+											Показать еще
+										</button>
+									</article>
+								</div>
+							</article>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>

@@ -34,4 +34,34 @@
 			}
 		}
 	}
+
+	&--transparent {
+		background-color: transparent;
+		width: 1.5rem;
+		height: 1.5rem;
+		padding: unset;
+	}
+
+	&__open-icon {
+		transition: transform $transition-300;
+	}
+
+	&--faded {
+		background-color: $pink-light;
+		width: 2.62rem;
+		height: 2.62rem;
+		border-radius: 0.25rem;
+	}
+
+	&--add-media {
+		width: 100%;
+		max-width: fit-content;
+		height: 100%;
+		border-radius: unset;
+		padding: unset;
+
+		font-size: $rem-093;
+		line-height: 100%;
+		color: $pink;
+	}
 }
