@@ -732,14 +732,6 @@ button {
   transform: rotate(0);
 }
 
-.show-list {
-  display: flex;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  pointer-events: all;
-  opacity: 1;
-}
-
 .media-files {
   display: flex;
   flex-direction: column;
