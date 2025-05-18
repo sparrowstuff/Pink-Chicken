@@ -3,4 +3,13 @@
 	bottom: -3.23rem;
 	left: 0;
 	width: 100%;
+
+	&__enter-text {
+		line-height: 135%;
+		font-size: $rem-062;
+
+		@media (max-width: 31.25rem) {
+			display: none;
+		}
+	}
 }

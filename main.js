@@ -179,10 +179,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			openFilesBtn.style.backgroundColor = 'transparent'
 			openReportBtn.style.backgroundColor = 'transparent'
 
-			const filesMainMenu = document.querySelector('.files-menu__media')
-			const reportMainMenu = document.querySelector('.files-menu__report')
-			filesMainMenu.style.outline = '2px solid #ee26c2'
-			reportMainMenu.style.outline = '2px solid #2676ee'
+			let innerWidth = window.innerWidth
+			if (innerWidth < 500) {
+				openFilesBtn.style.outline = '2px solid #ee26c2'
+				openReportBtn.style.outline = '2px solid #2676ee'
+			} else {
+				openFilesBtn.style.outline = 'unset'
+				openReportBtn.style.outline = 'unset'
+			}
 		}, 5000)
 
 		setTimeout(() => {

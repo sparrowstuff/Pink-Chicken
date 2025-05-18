@@ -346,6 +346,11 @@ body {
   padding: 0;
   flex-grow: 1;
 }
+@media (max-width: 31.25rem) {
+  body {
+    background-color: #ffffff;
+  }
+}
 
 main {
   flex-grow: 1;
@@ -404,9 +409,9 @@ button {
     padding: 0 2.5rem;
   }
 }
-@media (max-width: 25rem) {
+@media (max-width: 31.25rem) {
   .container {
-    padding: 0 1.2rem;
+    padding: 0 0.62rem;
   }
 }
 
@@ -752,11 +757,16 @@ button {
     flex-direction: row;
   }
 }
+@media (max-width: 31.25rem) {
+  .files-menu {
+    gap: 0.75rem;
+  }
+}
 .files-menu__media, .files-menu__report {
   gap: 0.87rem;
   width: 87%;
   display: none;
-  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+  padding: 0.75rem 0 0 0;
 }
 @media (max-width: 1023px) {
   .files-menu__media, .files-menu__report {
@@ -776,7 +786,7 @@ button {
 }
 @media (max-width: 40.62rem) {
   .files-menu__media, .files-menu__report {
-    padding: 2.56rem 0.75rem 0.75rem 0.75rem;
+    padding: 2.56rem 0 0 0;
     position: relative;
     background-color: transparent;
   }
@@ -847,6 +857,11 @@ button {
     transition: opacity ease-in 0.3s;
   }
 }
+@media (max-width: 23.2rem) {
+  .files-menu__added-icon {
+    right: 0.4rem;
+  }
+}
 
 .media-files {
   display: flex;
@@ -896,6 +911,16 @@ button {
   gap: 0.56rem;
   padding: 0.56rem 1.25rem 0.56rem 0.56rem;
 }
+@media (max-width: 31.25rem) {
+  .media-files__heading {
+    padding: 0.56rem 0.56rem 0.56rem 0.56rem;
+  }
+}
+@media (max-width: 31.25rem) {
+  .media-files__xml-icon {
+    display: none;
+  }
+}
 .media-files__company {
   font-size: 0.93rem;
   line-height: 135%;
@@ -929,21 +954,26 @@ button {
   opacity: 0;
 }
 .media-files--media .media-files__current-plan {
-  bottom: 0rem;
+  bottom: 0.5rem;
 }
-@media (max-width: 51.81rem) {
+@media (max-width: 1023px) {
+  .media-files--media .media-files__current-plan {
+    bottom: 0;
+  }
+}
+@media (max-width: 48.81rem) {
   .media-files--media .media-files__current-plan {
     bottom: 0.5rem;
   }
 }
-@media (max-width: 43rem) {
+@media (max-width: 36.25rem) {
   .media-files--media .media-files__current-plan {
-    bottom: 0;
+    bottom: 0.2rem;
   }
 }
-@media (max-width: 40.62rem) {
+@media (max-width: 33.25rem) {
   .media-files--media .media-files__current-plan {
-    bottom: 0;
+    bottom: 0.5rem;
   }
 }
 .media-files--report {
@@ -952,9 +982,27 @@ button {
   pointer-events: none;
   opacity: 0;
 }
-@media (max-width: 40.62rem) {
+.media-files--report .media-files__current-plan {
+  bottom: 0.5rem;
+}
+@media (max-width: 1023px) {
   .media-files--report .media-files__current-plan {
-    bottom: 0rem;
+    bottom: 0;
+  }
+}
+@media (max-width: 48.81rem) {
+  .media-files--report .media-files__current-plan {
+    bottom: 0.5rem;
+  }
+}
+@media (max-width: 36.25rem) {
+  .media-files--report .media-files__current-plan {
+    bottom: 0.2rem;
+  }
+}
+@media (max-width: 33.25rem) {
+  .media-files--report .media-files__current-plan {
+    bottom: 0.5rem;
   }
 }
 .media-files--show {
@@ -971,6 +1019,18 @@ button {
   padding: 1.75rem 1.75rem 1.75rem 1.75rem;
   border-radius: 1.25rem;
   width: 100%;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+  transition: box-shadow ease-in 0.3s;
+}
+@media (max-width: 48rem) {
+  .chat-menu {
+    box-shadow: unset;
+  }
+}
+@media (max-width: 31.25rem) {
+  .chat-menu {
+    padding: 0.62rem 0 0.62rem 0;
+  }
 }
 .chat-menu__main {
   display: flex;
@@ -998,6 +1058,11 @@ button {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 100%;
+}
+@media (max-width: 31.24rem) {
+  .chat-menu__title {
+    font-size: 1.25rem;
+  }
 }
 .chat-menu__info-block {
   display: flex;
@@ -1077,6 +1142,13 @@ button {
     height: 45.62rem;
   }
 }
+@media (max-width: 31.25rem) {
+  .chat-menu__chat {
+    width: 100vw;
+    padding: 1.87rem 1.25rem 1.87rem 1.25rem;
+    border-radius: unset;
+  }
+}
 .chat-menu__empty {
   display: flex;
   flex-direction: column;
@@ -1108,6 +1180,11 @@ button {
     right: 1.25rem;
   }
 }
+@media (max-width: 31.25rem) {
+  .chat-menu__btn-block {
+    bottom: 10.8rem;
+  }
+}
 .chat-menu__order-media-btn, .chat-menu__order-report-btn {
   min-height: 2.68rem;
 }
@@ -1120,6 +1197,12 @@ button {
   position: absolute;
   bottom: 3.7rem;
   right: 1.25rem;
+}
+@media (max-width: 31.25rem) {
+  .chat-menu__submit-btn-wrapper {
+    right: 9%;
+    bottom: 4.7rem;
+  }
 }
 .chat-menu__chatting {
   width: 100%;
@@ -1147,12 +1230,28 @@ button {
   left: 0;
   width: 100%;
 }
+.chat-form__enter-text {
+  line-height: 135%;
+  font-size: 0.62rem;
+}
+@media (max-width: 31.25rem) {
+  .chat-form__enter-text {
+    display: none;
+  }
+}
 
 .custom-textarea {
   position: absolute;
   bottom: 2.5rem;
   left: 0;
   width: 100%;
+}
+@media (max-width: 31.25rem) {
+  .custom-textarea {
+    width: 90%;
+    left: 5%;
+    bottom: 3.8rem;
+  }
 }
 .custom-textarea__field {
   width: 100%;

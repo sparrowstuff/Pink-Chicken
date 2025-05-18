@@ -5,6 +5,16 @@
 	padding: 1.75rem 1.75rem 1.75rem 1.75rem;
 	border-radius: 1.25rem;
 	width: 100%;
+	box-shadow: 0px 0px 30px 0px $main-08;
+	transition: box-shadow $transition-300;
+
+	@media (max-width: 48rem) {
+		box-shadow: unset;
+	}
+
+	@media (max-width: 31.25rem) {
+		padding: 0.62rem 0 0.62rem 0;
+	}
 
 	&__main {
 		@include flexCenter;
@@ -27,6 +37,10 @@
 		font-weight: 600;
 		font-size: $rem-15;
 		line-height: 100%;
+
+		@media (max-width: 31.24rem) {
+			font-size: $rem-125;
+		}
 	}
 
 	&__info-block {
@@ -96,6 +110,12 @@
 		@media (max-width: 34.68rem) {
 			height: 45.62rem;
 		}
+
+		@media (max-width: 31.25rem) {
+			width: 100vw;
+			padding: 1.87rem 1.25rem 1.87rem 1.25rem;
+			border-radius: unset;
+		}
 	}
 
 	&__empty {
@@ -123,6 +143,10 @@
 			left: unset;
 			right: 1.25rem;
 		}
+
+		@media (max-width: 31.25rem) {
+			bottom: 10.8rem;
+		}
 	}
 
 	&__order-media-btn,
@@ -137,6 +161,11 @@
 		position: absolute;
 		bottom: 3.7rem;
 		right: 1.25rem;
+
+		@media (max-width: 31.25rem) {
+			right: 9%;
+			bottom: 4.7rem;
+		}
 	}
 
 	&__chatting {

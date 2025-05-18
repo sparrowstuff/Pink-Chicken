@@ -35,6 +35,16 @@
 		@include flexCenter(row);
 		gap: 0.56rem;
 		padding: 0.56rem 1.25rem 0.56rem 0.56rem;
+
+		@media (max-width: 31.25rem) {
+			padding: 0.56rem 0.56rem 0.56rem 0.56rem;
+		}
+	}
+
+	&__xml-icon {
+		@media (max-width: 31.25rem) {
+			display: none;
+		}
 	}
 
 	&__company {
@@ -71,24 +81,30 @@
 		opacity: 0;
 
 		#{$root}__current-plan {
-			bottom: 0rem;
-		}
+			bottom: 0.5rem;
 
-		@media (max-width: 51.81rem) {
-			#{$root}__current-plan {
+			@media (max-width: $vp-tablet) {
+				bottom: 0;
+			}
+
+			// @media (max-width: 43rem) {
+			// 	bottom: 0;
+			// }
+
+			// @media (max-width: 40.62rem) {
+			// 	bottom: 0;
+			// }
+
+			@media (max-width: 48.81rem) {
 				bottom: 0.5rem;
 			}
-		}
 
-		@media (max-width: 43rem) {
-			#{$root}__current-plan {
-				bottom: 0;
+			@media (max-width: 36.25rem) {
+				bottom: 0.2rem;
 			}
-		}
 
-		@media (max-width: 40.62rem) {
-			#{$root}__current-plan {
-				bottom: 0;
+			@media (max-width: 33.25rem) {
+				bottom: 0.5rem;
 			}
 		}
 	}
@@ -99,9 +115,31 @@
 		pointer-events: none;
 		opacity: 0;
 
-		@media (max-width: 40.62rem) {
-			#{$root}__current-plan {
-				bottom: 0rem;
+		#{$root}__current-plan {
+			bottom: 0.5rem;
+
+			@media (max-width: $vp-tablet) {
+				bottom: 0;
+			}
+
+			// @media (max-width: 43rem) {
+			// 	bottom: 0;
+			// }
+
+			// @media (max-width: 40.62rem) {
+			// 	bottom: 0;
+			// }
+
+			@media (max-width: 48.81rem) {
+				bottom: 0.5rem;
+			}
+
+			@media (max-width: 36.25rem) {
+				bottom: 0.2rem;
+			}
+
+			@media (max-width: 33.25rem) {
+				bottom: 0.5rem;
 			}
 		}
 	}
