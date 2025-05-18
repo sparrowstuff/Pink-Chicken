@@ -4,6 +4,7 @@
 	background-color: $white;
 	box-shadow: 0rem 0rem 1.87rem 0rem $main-08;
 	max-width: 18.43rem;
+	transition: box-shadow $transition-300, background-color $transition-300;
 
 	@media (max-width: $vp-tablet) {
 		max-width: unset;
@@ -11,7 +12,8 @@
 		min-height: unset;
 	}
 
-	@media (max-width: 37.5rem) {
+	@media (max-width: 40.62rem) {
+		box-shadow: unset;
 		background-color: transparent;
 	}
 

@@ -33,6 +33,7 @@
 		@media (max-width: 40.62rem) {
 			padding: 2.56rem 0.75rem 0.75rem 0.75rem;
 			position: relative;
+			background-color: transparent;
 		}
 	}
 
@@ -88,6 +89,12 @@
 		transition: color $transition-300;
 	}
 
+	&__open-icon {
+		@media (max-width: 40rem) {
+			display: none;
+		}
+	}
+
 	&__open-btn-rotate {
 		#{$root}__open-icon {
 			transform: rotate(0);
@@ -95,7 +102,7 @@
 	}
 
 	&__added-icon {
-		@media (min-width: 40.62rem) {
+		@media (min-width: 40rem) {
 			display: none;
 		}
 

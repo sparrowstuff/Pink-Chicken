@@ -87,15 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
-	// const openFilesBtn = document.querySelectorAll('.files-menu__open-btn')
-
-	// openFilesBtn.forEach(button => {
-	// 	button.addEventListener('click', function () {
-	// 		this.classList.toggle('files-menu__open-btn-rotate')
-	// 		reportList.classList.toggle('show-list')
-	// 	})
-	// })
-
 	// появление меню медиапланов и отчетов по кнопке
 	const openFilesBtn = document.querySelector('#filesBtn')
 	const openReportBtn = document.querySelector('#reportBtn')
@@ -129,6 +120,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	chatForm.addEventListener('submit', e => {
 		e.preventDefault()
+		console.log('form is working')
+		const emptyChat = document.querySelector('.chat-menu__empty')
+		emptyChat.style.display = 'none'
+
+		const textAreaField = document.querySelector('#chat')
+		const textAreaInput = textAreaField.value
+		// console.log(textAreaInput)
+
+		let currentDate = document.querySelector('.chat-menu__current-date')
+		// let day = new Date().getDate()
+		let hour = new Date().getHours()
+		let minutes = new Date().getMinutes()
+		const formattedMinutes = String(minutes).padStart(2, '0')
+
+		const currentDay = `Сегодня, ${hour}:${formattedMinutes}`
+		currentDate.style.opacity = '1'
+		currentDate.textContent = currentDay
 	})
 
 	// появление меню медиафайлов и отчетов по нажатию кнопки из чата
@@ -174,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			const filesMainMenu = document.querySelector('.files-menu__media')
 			const reportMainMenu = document.querySelector('.files-menu__report')
 			filesMainMenu.style.outline = '2px solid #ee26c2'
-			reportMainMenu.style.outline = '2px solid #ee26c2'
+			reportMainMenu.style.outline = '2px solid #2676ee'
 		}, 5000)
 
 		setTimeout(() => {

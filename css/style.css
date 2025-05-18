@@ -664,6 +664,7 @@ button {
   background-color: #ffffff;
   box-shadow: 0rem 0rem 1.87rem 0rem rgba(0, 0, 0, 0.08);
   max-width: 18.43rem;
+  transition: box-shadow ease-in 0.3s, background-color ease-in 0.3s;
 }
 @media (max-width: 1023px) {
   .aside-menu {
@@ -672,8 +673,9 @@ button {
     min-height: unset;
   }
 }
-@media (max-width: 37.5rem) {
+@media (max-width: 40.62rem) {
   .aside-menu {
+    box-shadow: unset;
     background-color: transparent;
   }
 }
@@ -776,6 +778,7 @@ button {
   .files-menu__media, .files-menu__report {
     padding: 2.56rem 0.75rem 0.75rem 0.75rem;
     position: relative;
+    background-color: transparent;
   }
 }
 .files-menu__media--shown {
@@ -820,10 +823,15 @@ button {
   color: #000000;
   transition: color ease-in 0.3s;
 }
+@media (max-width: 40rem) {
+  .files-menu__open-icon {
+    display: none;
+  }
+}
 .files-menu__open-btn-rotate .files-menu__open-icon {
   transform: rotate(0);
 }
-@media (min-width: 40.62rem) {
+@media (min-width: 40rem) {
   .files-menu__added-icon {
     display: none;
   }
@@ -978,6 +986,13 @@ button {
   justify-content: space-between;
   gap: 0.62rem;
   width: 100%;
+  position: relative;
+}
+@media (max-width: 46.87rem) {
+  .chat-menu__heading {
+    position: relative;
+    margin-bottom: 2.44rem;
+  }
 }
 .chat-menu__title {
   font-weight: 600;
@@ -990,7 +1005,6 @@ button {
   align-items: center;
   justify-content: center;
   gap: 1.62rem;
-  position: relative;
 }
 .chat-menu__account-info {
   display: flex;
@@ -998,6 +1012,13 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.62rem;
+}
+@media (max-width: 46.87rem) {
+  .chat-menu__account-info {
+    position: absolute;
+    top: 3.43rem;
+    left: 0;
+  }
 }
 .chat-menu__account-name, .chat-menu__email {
   font-size: 0.93rem;
@@ -1051,6 +1072,11 @@ button {
   height: 100%;
   min-height: 36.12rem;
 }
+@media (max-width: 34.68rem) {
+  .chat-menu__chat {
+    height: 45.62rem;
+  }
+}
 .chat-menu__empty {
   display: flex;
   flex-direction: column;
@@ -1074,6 +1100,14 @@ button {
   justify-content: center;
   gap: 0.75rem;
 }
+@media (max-width: 34.68rem) {
+  .chat-menu__btn-block {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    left: unset;
+    right: 1.25rem;
+  }
+}
 .chat-menu__order-media-btn, .chat-menu__order-report-btn {
   min-height: 2.68rem;
 }
@@ -1086,6 +1120,25 @@ button {
   position: absolute;
   bottom: 3.7rem;
   right: 1.25rem;
+}
+.chat-menu__chatting {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.chat-menu__current-date {
+  font-size: 0.93rem;
+  line-height: 135%;
+  color: #525252;
+  position: absolute;
+  top: 3.06rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .chat-form {
