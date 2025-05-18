@@ -3,17 +3,24 @@
 	gap: 0.75rem;
 	width: 100%;
 	transition: opacity $transition-300, clip-path $transition-300;
+	$root: &;
 
 	&__list {
 		@include flexStart;
 		gap: 0.5rem;
 		width: 100%;
+
+		@media (max-width: 40.62rem) {
+			margin-top: 1rem;
+		}
 	}
 
 	&__item {
 		@include flexStart;
 		width: 100%;
 		gap: 0.5rem;
+
+		position: relative;
 	}
 
 	&__inner {
@@ -35,9 +42,22 @@
 		line-height: 135%;
 	}
 
+	&__awaiting-plan {
+		@include flexCenter(row);
+		gap: 0.31rem;
+
+		transition: opacity $transition-300;
+	}
+
 	&__current-plan {
 		@include flexCenter(row);
 		gap: 0.31rem;
+
+		position: absolute;
+		opacity: 0;
+		bottom: 0.5rem;
+
+		transition: opacity $transition-300;
 	}
 
 	&__add-file-btn {
@@ -49,6 +69,28 @@
 		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 		pointer-events: none;
 		opacity: 0;
+
+		#{$root}__current-plan {
+			bottom: 0rem;
+		}
+
+		@media (max-width: 51.81rem) {
+			#{$root}__current-plan {
+				bottom: 0.5rem;
+			}
+		}
+
+		@media (max-width: 43rem) {
+			#{$root}__current-plan {
+				bottom: 0;
+			}
+		}
+
+		@media (max-width: 40.62rem) {
+			#{$root}__current-plan {
+				bottom: 0;
+			}
+		}
 	}
 
 	&--report {
@@ -56,6 +98,12 @@
 		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 		pointer-events: none;
 		opacity: 0;
+
+		@media (max-width: 40.62rem) {
+			#{$root}__current-plan {
+				bottom: 0rem;
+			}
+		}
 	}
 
 	&--show {

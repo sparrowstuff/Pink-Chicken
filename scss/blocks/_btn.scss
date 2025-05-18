@@ -13,12 +13,15 @@
 
 	@include flexCenter;
 
+	transition: background-color $transition-300, color $transition-300,
+		transform $transition-300;
+
 	&--account {
 		background-color: $white;
 		border-radius: 50%;
 		width: 2.5rem;
 		height: 2.5rem;
-		transition: background-color $transition-300;
+		// transition: background-color $transition-300;
 
 		#{$root}__settings-icon {
 			color: $grey;
@@ -63,5 +66,35 @@
 		font-size: $rem-093;
 		line-height: 100%;
 		color: $pink;
+	}
+
+	&--blue {
+		background-color: $blue;
+	}
+
+	&--chat {
+		width: 3.12rem;
+		height: 3.12rem;
+		border-radius: 50%;
+	}
+
+	&--three-dot {
+		background-color: $grey-main;
+		border-radius: 50%;
+	}
+
+	&--change {
+		width: 100%;
+		font-weight: 500;
+		font-size: $rem-1;
+		line-height: 100%;
+		color: $main;
+		align-items: flex-end;
+		text-align: right;
+
+		&:hover,
+		&:focus-visible {
+			color: $pink;
+		}
 	}
 }

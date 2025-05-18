@@ -5,10 +5,14 @@
 	box-shadow: 0rem 0rem 1.87rem 0rem $main-08;
 	max-width: 18.43rem;
 
-	@media (max-width: 48rem) {
+	@media (max-width: $vp-tablet) {
 		max-width: unset;
 		width: 100%;
 		min-height: unset;
+	}
+
+	@media (max-width: 37.5rem) {
+		background-color: transparent;
 	}
 
 	&__main {
@@ -16,9 +20,28 @@
 		@include flexStart;
 		gap: 1.87rem;
 
-		@media (max-width: 48rem) {
+		// @media (max-width: $vp-tablet) {
+		// 	width: 100%;
+		// }
+
+		@media (max-width: $vp-tablet) {
 			gap: 1.25rem;
 			// width: 100%;
+		}
+
+		@media (max-width: 40.62rem) {
+			padding: unset;
+			background-color: transparent;
+		}
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: $rem-15;
+		line-height: 100%;
+
+		@media (max-width: 40.62rem) {
+			display: none;
 		}
 	}
 
@@ -26,9 +49,17 @@
 		@include flexCenter;
 		gap: 1.87rem;
 
-		@media (max-width: 48rem) {
+		@media (max-width: $vp-tablet) {
 			flex-direction: row;
 		}
+
+		@media (max-width: 40.06rem) {
+			display: none;
+		}
+	}
+
+	&__empty--not-shown {
+		display: none;
 	}
 
 	&__empty-text {
@@ -37,7 +68,7 @@
 		line-height: 145%;
 		text-align: center;
 
-		@media (max-width: 48rem) {
+		@media (max-width: $vp-tablet) {
 			text-align: left;
 			max-width: 15.93rem;
 		}

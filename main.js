@@ -102,18 +102,83 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	openFilesBtn.onclick = function () {
 		const mediaFilesList = document.querySelector('.media-files--media')
+		const menuWrapper = document.querySelector('#appearance-wrap-1')
 		mediaFilesList.classList.toggle('media-files--show')
 		this.classList.toggle('files-menu__open-btn-rotate')
-
-		// const openBtnIcon = document.querySelector(
-		// 	'.media-files--media .media-files__open-btn'
-		// )
-		// openBtnIcon.classList.toggle('media-files__open-btn-rotate')
+		menuWrapper.classList.toggle('visually-hidden')
 	}
 
 	openReportBtn.onclick = function () {
 		const reportFilesList = document.querySelector('.media-files--report')
+		const menuWrapper = document.querySelector('#appearance-wrap-2')
 		reportFilesList.classList.toggle('media-files--show')
 		this.classList.toggle('files-menu__open-btn-rotate')
+		menuWrapper.classList.toggle('visually-hidden')
 	}
+
+	// открытие меню смены помощника
+	const threeDotBtn = document.querySelector('#three-dot-btn')
+	const changeMenu = document.querySelector('.chat-menu__change-menu')
+
+	threeDotBtn.onclick = function () {
+		changeMenu.classList.toggle('chat-menu__change-menu--shown')
+	}
+
+	// работа формы
+	const chatForm = document.querySelector('.chat-form')
+
+	chatForm.addEventListener('submit', e => {
+		e.preventDefault()
+	})
+
+	// появление меню медиафайлов и отчетов по нажатию кнопки из чата
+
+	const mediaShowBtn = document.querySelector('#order-media-btn')
+	const reportShowBtn = document.querySelector('#order-report-btn')
+	const emptyBlock = document.querySelector('.aside-menu__empty')
+	const mediaMenu = document.querySelector('.files-menu__media')
+	const reportMenu = document.querySelector('.files-menu__report')
+
+	mediaShowBtn.onclick = function () {
+		emptyBlock.classList.add('aside-menu__empty--not-shown')
+		mediaMenu.classList.add('files-menu__media--shown')
+	}
+
+	reportShowBtn.onclick = function () {
+		emptyBlock.classList.add('aside-menu__empty--not-shown')
+		reportMenu.classList.add('files-menu__media--shown')
+	}
+
+	// появление текста "план составлен" и иконок в кнопках, задний фон кнопок при появлении иконок
+
+	const awaitingPlan = document.querySelectorAll('.media-files__awaiting-plan')
+	const readyPlan = document.querySelectorAll('.media-files__current-plan')
+
+	const addedIcon = document.querySelectorAll('.files-menu__added-icon')
+
+	window.addEventListener('load', function () {
+		const interval = setInterval(() => {
+			awaitingPlan.forEach(element => {
+				element.style.opacity = '0'
+			})
+			readyPlan.forEach(element => {
+				element.style.opacity = '1'
+			})
+			addedIcon.forEach(icon => {
+				icon.style.opacity = '1'
+			})
+
+			openFilesBtn.style.backgroundColor = 'transparent'
+			openReportBtn.style.backgroundColor = 'transparent'
+
+			const filesMainMenu = document.querySelector('.files-menu__media')
+			const reportMainMenu = document.querySelector('.files-menu__report')
+			filesMainMenu.style.outline = '2px solid #ee26c2'
+			reportMainMenu.style.outline = '2px solid #ee26c2'
+		}, 5000)
+
+		setTimeout(() => {
+			clearInterval(interval)
+		}, 6000)
+	})
 })

@@ -2,7 +2,7 @@
 	padding: 0 0 3.75rem;
 
 	&__main {
-		@include flexCenter(row);
+		@include flexCenter(row, flex-start);
 		gap: 1.87rem;
 
 		@media (max-width: $vp-tablet) {

@@ -3,16 +3,41 @@
 	gap: 1.87rem;
 	width: 100%;
 	$root: &;
+	min-width: 18.43rem;
 
-	@media (max-width: 48rem) {
+	@media (max-width: $vp-tablet) {
 		flex-direction: row;
 	}
 
 	&__media,
 	&__report {
-		@include flexStart;
 		gap: 0.87rem;
-		width: 100%;
+		width: 87%;
+		display: none;
+		padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+		// max-width: 18.43rem;
+
+		@media (max-width: $vp-tablet) {
+			width: 50%;
+		}
+
+		@media (max-width: 40.06rem) {
+			@include flexStart;
+			background-color: $white;
+
+			#{$root}__open-icon {
+				display: none;
+			}
+		}
+
+		@media (max-width: 40.62rem) {
+			padding: 2.56rem 0.75rem 0.75rem 0.75rem;
+			position: relative;
+		}
+	}
+
+	&__media--shown {
+		@include flexStart;
 	}
 
 	// &__heading {
@@ -25,6 +50,9 @@
 		@include flexCenter(row, center, space-between);
 		gap: 0.62rem;
 		width: 100%;
+		// max-width: 18.43rem;
+		position: relative;
+
 		#{$root}__open-icon {
 			transform: rotate(180deg);
 			transition: transform $transition-300, scale $transition-300;
@@ -40,6 +68,16 @@
 				scale: 1.2;
 			}
 		}
+
+		@media (max-width: 40.62rem) {
+			background-color: $grey-btn;
+			padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+			position: absolute;
+			border-radius: unset;
+			top: 0;
+			left: 0;
+			height: 3.25rem;
+		}
 	}
 
 	&__btn-text {
@@ -53,6 +91,22 @@
 	&__open-btn-rotate {
 		#{$root}__open-icon {
 			transform: rotate(0);
+		}
+	}
+
+	&__added-icon {
+		@media (min-width: 40.62rem) {
+			display: none;
+		}
+
+		@media (max-width: 40.62rem) {
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0.75rem;
+			opacity: 0;
+			transition: opacity $transition-300;
 		}
 	}
 }

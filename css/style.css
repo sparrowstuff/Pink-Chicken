@@ -572,13 +572,13 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: background-color ease-in 0.3s, color ease-in 0.3s, transform ease-in 0.3s;
 }
 .btn--account {
   background-color: #ffffff;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
-  transition: background-color ease-in 0.3s;
 }
 .btn--account .btn__settings-icon {
   color: #525252;
@@ -616,6 +616,30 @@ button {
   line-height: 100%;
   color: #ee26c2;
 }
+.btn--blue {
+  background-color: #2676ee;
+}
+.btn--chat {
+  width: 3.12rem;
+  height: 3.12rem;
+  border-radius: 50%;
+}
+.btn--three-dot {
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+.btn--change {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 100%;
+  color: #000000;
+  align-items: flex-end;
+  text-align: right;
+}
+.btn--change:hover, .btn--change:focus-visible {
+  color: #ee26c2;
+}
 
 .hero {
   padding: 0 0 3.75rem;
@@ -623,7 +647,7 @@ button {
 .hero__main {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 1.87rem;
 }
@@ -641,11 +665,16 @@ button {
   box-shadow: 0rem 0rem 1.87rem 0rem rgba(0, 0, 0, 0.08);
   max-width: 18.43rem;
 }
-@media (max-width: 48rem) {
+@media (max-width: 1023px) {
   .aside-menu {
     max-width: unset;
     width: 100%;
     min-height: unset;
+  }
+}
+@media (max-width: 37.5rem) {
+  .aside-menu {
+    background-color: transparent;
   }
 }
 .aside-menu__main {
@@ -655,9 +684,25 @@ button {
   align-items: flex-start;
   gap: 1.87rem;
 }
-@media (max-width: 48rem) {
+@media (max-width: 1023px) {
   .aside-menu__main {
     gap: 1.25rem;
+  }
+}
+@media (max-width: 40.62rem) {
+  .aside-menu__main {
+    padding: unset;
+    background-color: transparent;
+  }
+}
+.aside-menu__title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 100%;
+}
+@media (max-width: 40.62rem) {
+  .aside-menu__title {
+    display: none;
   }
 }
 .aside-menu__empty {
@@ -667,17 +712,25 @@ button {
   justify-content: center;
   gap: 1.87rem;
 }
-@media (max-width: 48rem) {
+@media (max-width: 1023px) {
   .aside-menu__empty {
     flex-direction: row;
   }
+}
+@media (max-width: 40.06rem) {
+  .aside-menu__empty {
+    display: none;
+  }
+}
+.aside-menu__empty--not-shown {
+  display: none;
 }
 .aside-menu__empty-text {
   font-weight: 500;
   line-height: 145%;
   text-align: center;
 }
-@media (max-width: 48rem) {
+@media (max-width: 1023px) {
   .aside-menu__empty-text {
     text-align: left;
     max-width: 15.93rem;
@@ -690,18 +743,45 @@ button {
   align-items: flex-start;
   gap: 1.87rem;
   width: 100%;
+  min-width: 18.43rem;
 }
-@media (max-width: 48rem) {
+@media (max-width: 1023px) {
   .files-menu {
     flex-direction: row;
   }
 }
 .files-menu__media, .files-menu__report {
+  gap: 0.87rem;
+  width: 87%;
+  display: none;
+  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+}
+@media (max-width: 1023px) {
+  .files-menu__media, .files-menu__report {
+    width: 50%;
+  }
+}
+@media (max-width: 40.06rem) {
+  .files-menu__media, .files-menu__report {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffffff;
+  }
+  .files-menu__media .files-menu__open-icon, .files-menu__report .files-menu__open-icon {
+    display: none;
+  }
+}
+@media (max-width: 40.62rem) {
+  .files-menu__media, .files-menu__report {
+    padding: 2.56rem 0.75rem 0.75rem 0.75rem;
+    position: relative;
+  }
+}
+.files-menu__media--shown {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.87rem;
-  width: 100%;
 }
 .files-menu__open-btn {
   display: flex;
@@ -710,6 +790,7 @@ button {
   justify-content: space-between;
   gap: 0.62rem;
   width: 100%;
+  position: relative;
 }
 .files-menu__open-btn .files-menu__open-icon {
   transform: rotate(180deg);
@@ -721,6 +802,17 @@ button {
 .files-menu__open-btn:hover .files-menu__open-icon, .files-menu__open-btn:focus-visible .files-menu__open-icon {
   scale: 1.2;
 }
+@media (max-width: 40.62rem) {
+  .files-menu__open-btn {
+    background-color: #cbcbcb;
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+    position: absolute;
+    border-radius: unset;
+    top: 0;
+    left: 0;
+    height: 3.25rem;
+  }
+}
 .files-menu__btn-text {
   font-weight: 600;
   font-size: 1.12rem;
@@ -730,6 +822,22 @@ button {
 }
 .files-menu__open-btn-rotate .files-menu__open-icon {
   transform: rotate(0);
+}
+@media (min-width: 40.62rem) {
+  .files-menu__added-icon {
+    display: none;
+  }
+}
+@media (max-width: 40.62rem) {
+  .files-menu__added-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.75rem;
+    opacity: 0;
+    transition: opacity ease-in 0.3s;
+  }
 }
 
 .media-files {
@@ -749,12 +857,18 @@ button {
   gap: 0.5rem;
   width: 100%;
 }
+@media (max-width: 40.62rem) {
+  .media-files__list {
+    margin-top: 1rem;
+  }
+}
 .media-files__item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
   gap: 0.5rem;
+  position: relative;
 }
 .media-files__inner {
   display: flex;
@@ -778,12 +892,24 @@ button {
   font-size: 0.93rem;
   line-height: 135%;
 }
+.media-files__awaiting-plan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.31rem;
+  transition: opacity ease-in 0.3s;
+}
 .media-files__current-plan {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0.31rem;
+  position: absolute;
+  opacity: 0;
+  bottom: 0.5rem;
+  transition: opacity ease-in 0.3s;
 }
 .media-files__add-file-btn {
   margin-left: auto;
@@ -794,15 +920,214 @@ button {
   pointer-events: none;
   opacity: 0;
 }
+.media-files--media .media-files__current-plan {
+  bottom: 0rem;
+}
+@media (max-width: 51.81rem) {
+  .media-files--media .media-files__current-plan {
+    bottom: 0.5rem;
+  }
+}
+@media (max-width: 43rem) {
+  .media-files--media .media-files__current-plan {
+    bottom: 0;
+  }
+}
+@media (max-width: 40.62rem) {
+  .media-files--media .media-files__current-plan {
+    bottom: 0;
+  }
+}
 .media-files--report {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   pointer-events: none;
   opacity: 0;
 }
+@media (max-width: 40.62rem) {
+  .media-files--report .media-files__current-plan {
+    bottom: 0rem;
+  }
+}
 .media-files--show {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   pointer-events: all;
   opacity: 1;
+}
+
+.chat-menu {
+  min-height: 44.31rem;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 1.75rem 1.75rem 1.75rem 1.75rem;
+  border-radius: 1.25rem;
+  width: 100%;
+}
+.chat-menu__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.18rem;
+}
+.chat-menu__heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.62rem;
+  width: 100%;
+}
+.chat-menu__title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 100%;
+}
+.chat-menu__info-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.62rem;
+  position: relative;
+}
+.chat-menu__account-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.62rem;
+}
+.chat-menu__account-name, .chat-menu__email {
+  font-size: 0.93rem;
+  line-height: 100%;
+}
+.chat-menu__account-name {
+  font-weight: 600;
+}
+.chat-menu__email {
+  color: #525252;
+}
+.chat-menu__change-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: unset;
+  gap: 0.75rem;
+  width: 21.12rem;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.87rem 1rem 1.87rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 3.37rem;
+  right: 0;
+  z-index: 10;
+  opacity: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  pointer-events: none;
+  transition: opacity ease-in 0.3s, -webkit-clip-path ease-in 0.3s;
+  transition: opacity ease-in 0.3s, clip-path ease-in 0.3s;
+  transition: opacity ease-in 0.3s, clip-path ease-in 0.3s, -webkit-clip-path ease-in 0.3s;
+}
+.chat-menu__change-menu--shown {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.chat-menu__chat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: unset;
+  background-color: #ebebeb;
+  border-radius: 1.25rem;
+  padding: 3.06rem 1.25rem 0 1.25rem;
+  width: 100%;
+  height: 100%;
+  min-height: 36.12rem;
+}
+.chat-menu__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.chat-menu__empty-text {
+  font-weight: 500;
+  line-height: 145%;
+  max-width: 29.37rem;
+  text-align: center;
+}
+.chat-menu__btn-block {
+  position: absolute;
+  bottom: 10.25rem;
+  left: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.chat-menu__order-media-btn, .chat-menu__order-report-btn {
+  min-height: 2.68rem;
+}
+.chat-menu__submit-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  position: absolute;
+  bottom: 3.7rem;
+  right: 1.25rem;
+}
+
+.chat-form {
+  position: absolute;
+  bottom: -3.23rem;
+  left: 0;
+  width: 100%;
+}
+
+.custom-textarea {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  width: 100%;
+}
+.custom-textarea__field {
+  width: 100%;
+  height: 9rem;
+  resize: none;
+  border-radius: 1.25rem;
+  border: 2px solid #ebebeb;
+  text-align: left;
+  padding: 1.56rem 4.68rem 3.12rem 1.25rem;
+}
+
+.custom-file-input--file {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.25rem;
+}
+.custom-file-input--picture {
+  position: absolute;
+  bottom: 1rem;
+  left: 3.25rem;
+}
+.custom-file-input__label {
+  cursor: pointer;
+  display: block;
+  width: 2.5rem;
+  height: 2rem;
+}
+.custom-file-input__file-btn {
+  width: 1.5rem;
+  height: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
