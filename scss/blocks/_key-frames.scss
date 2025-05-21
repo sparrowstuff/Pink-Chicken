@@ -1,0 +1,35 @@
+@keyframes mainLinkFadeIn {
+	0% {
+		opacity: 0;
+		scale: 1.2;
+	}
+
+	100% {
+		opacity: 1;
+		scale: 1;
+	}
+}
+
+@keyframes userInfoSlideIn {
+	0% {
+		transform: translateY(-0.62rem);
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes headerBtnSlideIn {
+	0% {
+		opacity: 0;
+		transform: translateX(0.62rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

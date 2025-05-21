@@ -1,7 +1,9 @@
 .main-link {
 	$root: &;
+	opacity: 0;
 
 	@include flexCenter(row, center, unset);
+	animation: mainLinkFadeIn 0.5s ease-in forwards;
 
 	&__pink,
 	&__c,
@@ -23,6 +25,8 @@
 
 	&--footer {
 		color: $grey;
+		animation: unset;
+		opacity: 1;
 		#{$root}__pink {
 			color: $grey;
 		}
