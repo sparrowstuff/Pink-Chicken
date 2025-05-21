@@ -1407,6 +1407,10 @@ footer {
   border: 2px solid #ebebeb;
   text-align: left;
   padding: 1.56rem 4.68rem 3.12rem 1.25rem;
+  transition: border ease-in 0.3s;
+}
+.custom-textarea__field:hover, .custom-textarea__field:focus-visible {
+  border: 2px solid #ee26c2;
 }
 
 .custom-file-input--file {

@@ -22,5 +22,11 @@
 		border: 2px solid $grey-light;
 		text-align: left;
 		padding: 1.56rem 4.68rem 3.12rem 1.25rem;
+		transition: border $transition-300;
+
+		&:hover,
+		&:focus-visible {
+			border: 2px solid $pink;
+		}
 	}
 }
