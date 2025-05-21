@@ -122,14 +122,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	chatForm.addEventListener('submit', e => {
 		e.preventDefault()
-		// console.log('form is working')
 		const emptyChat = document.querySelector('.chat-menu__empty')
 		emptyChat.style.display = 'none'
 
 		const textAreaInput = textAreaField.value
-
 		if (!textAreaInput) return
-
 		textAreaField.value = ''
 
 		let currentDate = document.querySelector('.chat-menu__current-date')
@@ -144,12 +141,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		chatTime2.textContent = `${hour}:${formattedMinutes}`
 
 		// появление чата
-
 		const inputMessage = document.querySelector('#inputText')
 		inputMessage.textContent = textAreaInput
 		answerBlock.style.opacity = '1'
 
-		const currentAnswer = document.querySelector('#currentAnswer') // ответ бота
+		const currentAnswer = document.querySelector('#currentAnswer')
 
 		const chatInterval = setInterval(() => {
 			currentAnswer.style.opacity = '1'
@@ -162,13 +158,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		const currentDay = `Сегодня, ${hour}:${formattedMinutes}`
 		currentDate.style.opacity = '1'
 		currentDate.textContent = currentDay
-
-		const chattingBlock = document.querySelector('#chattingBlock')
-		chattingBlock.style.overflowY = 'scroll'
-
-		// if (!textAreaInput.value) {
-		// 	answerBlock.appendChild(currentAnswer)
-		// }
 	})
 
 	// появление меню медиафайлов и отчетов по нажатию кнопки из чата

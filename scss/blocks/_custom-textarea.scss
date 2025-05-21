@@ -4,6 +4,10 @@
 	left: 0;
 	width: 100%;
 
+	@media (max-width: 50rem) {
+		bottom: 2.1rem;
+	}
+
 	@media (max-width: 31.25rem) {
 		width: 90%;
 		left: 5%;

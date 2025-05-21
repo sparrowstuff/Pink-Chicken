@@ -8,8 +8,9 @@
 	box-shadow: 0px 0px 30px 0px $main-08;
 	transition: box-shadow $transition-300;
 
-	@media (max-width: 48rem) {
+	@media (max-width: 50rem) {
 		box-shadow: unset;
+		padding: 1.25rem 1.75rem 1.25rem 1.75rem;
 	}
 
 	@media (max-width: 31.25rem) {
@@ -123,11 +124,26 @@
 		gap: 1.25rem;
 	}
 
+	&__empty-icon {
+		@media (max-width: 50rem) {
+			width: 11.25rem;
+			height: 11.43rem;
+		}
+	}
+
 	&__empty-text {
 		font-weight: 500;
 		line-height: 145%;
 		max-width: 29.37rem;
 		text-align: center;
+
+		@media (max-width: 50rem) {
+			max-width: 22.75rem;
+		}
+
+		@media (max-width: 31.25rem) {
+			max-width: 16.93rem;
+		}
 	}
 
 	&__btn-block {
@@ -136,6 +152,10 @@
 		left: 1.25rem;
 		@include flexCenter(row);
 		gap: 0.75rem;
+
+		@media (max-width: 50rem) {
+			bottom: 9.25rem;
+		}
 
 		@media (max-width: 34.68rem) {
 			flex-direction: column-reverse;
@@ -162,6 +182,11 @@
 		bottom: 3.7rem;
 		right: 1.25rem;
 
+		@media (max-width: 50rem) {
+			bottom: 3rem;
+			right: 2.5rem;
+		}
+
 		@media (max-width: 31.25rem) {
 			right: 9%;
 			bottom: 4.7rem;
@@ -173,9 +198,6 @@
 		height: 80%;
 		@include flexCenter(column, unset, flex-start);
 		padding: 2.75rem 0 0 0;
-		// overflow-y: scroll;
-		scrollbar-color: $grey;
-		// gap: 1.5rem;
 	}
 
 	&__current-date {

@@ -9,6 +9,10 @@
 		position: absolute;
 		bottom: 1rem;
 		left: 3.25rem;
+
+		@media (max-width: 50rem) {
+			left: 3.9rem;
+		}
 	}
 
 	&__label {
