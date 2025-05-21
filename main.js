@@ -119,10 +119,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	const chatForm = document.querySelector('.chat-form')
 	const textAreaField = document.querySelector('#chat')
 	const answerBlock = document.querySelector('#answerBlock')
+	const emptyChat = document.querySelector('.chat-menu__empty')
 
 	chatForm.addEventListener('submit', e => {
 		e.preventDefault()
-		const emptyChat = document.querySelector('.chat-menu__empty')
 		emptyChat.style.display = 'none'
 
 		const textAreaInput = textAreaField.value
