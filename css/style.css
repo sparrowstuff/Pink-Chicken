@@ -1209,8 +1209,10 @@ button {
   height: 80%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: unset;
+  justify-content: flex-start;
+  padding: 2.75rem 0 0 0;
+  scrollbar-color: #525252;
 }
 .chat-menu__current-date {
   font-size: 0.93rem;
@@ -1222,6 +1224,48 @@ button {
   transform: translateX(-50%);
   opacity: 0;
   pointer-events: none;
+}
+.chat-menu__current-hour {
+  font-size: 0.93rem;
+  line-height: 135%;
+  color: #525252;
+}
+.chat-menu__answer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.68rem;
+  opacity: 0;
+  transition: opacity ease-in 0.3s;
+}
+.chat-menu__answer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.81rem;
+}
+.chat-menu__current-answer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity ease-in 0.3s;
+}
+.chat-menu__text-answer, .chat-menu__input-text {
+  max-width: 33.81rem;
+  padding: 1rem 1.37rem 1rem 1.37rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  line-height: 145%;
+  color: #000000;
+}
+.chat-menu__input-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
+  gap: 0.5rem;
 }
 
 .chat-form {

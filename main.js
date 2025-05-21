@@ -115,28 +115,60 @@ document.addEventListener('DOMContentLoaded', function () {
 		changeMenu.classList.toggle('chat-menu__change-menu--shown')
 	}
 
-	// работа формы
+	// работа формы и работа textarea
 	const chatForm = document.querySelector('.chat-form')
+	const textAreaField = document.querySelector('#chat')
+	const answerBlock = document.querySelector('#answerBlock')
 
 	chatForm.addEventListener('submit', e => {
 		e.preventDefault()
-		console.log('form is working')
+		// console.log('form is working')
 		const emptyChat = document.querySelector('.chat-menu__empty')
 		emptyChat.style.display = 'none'
 
-		const textAreaField = document.querySelector('#chat')
 		const textAreaInput = textAreaField.value
-		// console.log(textAreaInput)
+
+		if (!textAreaInput) return
+
+		textAreaField.value = ''
 
 		let currentDate = document.querySelector('.chat-menu__current-date')
-		// let day = new Date().getDate()
 		let hour = new Date().getHours()
 		let minutes = new Date().getMinutes()
 		const formattedMinutes = String(minutes).padStart(2, '0')
 
+		// появление времени в чате
+		const chatTime = document.querySelector('#time')
+		const chatTime2 = document.querySelector('#time-2')
+		chatTime.textContent = `${hour}:${formattedMinutes}`
+		chatTime2.textContent = `${hour}:${formattedMinutes}`
+
+		// появление чата
+
+		const inputMessage = document.querySelector('#inputText')
+		inputMessage.textContent = textAreaInput
+		answerBlock.style.opacity = '1'
+
+		const currentAnswer = document.querySelector('#currentAnswer') // ответ бота
+
+		const chatInterval = setInterval(() => {
+			currentAnswer.style.opacity = '1'
+		}, 2000)
+
+		setTimeout(() => {
+			clearInterval(chatInterval)
+		}, 2000)
+
 		const currentDay = `Сегодня, ${hour}:${formattedMinutes}`
 		currentDate.style.opacity = '1'
 		currentDate.textContent = currentDay
+
+		const chattingBlock = document.querySelector('#chattingBlock')
+		chattingBlock.style.overflowY = 'scroll'
+
+		// if (!textAreaInput.value) {
+		// 	answerBlock.appendChild(currentAnswer)
+		// }
 	})
 
 	// появление меню медиафайлов и отчетов по нажатию кнопки из чата

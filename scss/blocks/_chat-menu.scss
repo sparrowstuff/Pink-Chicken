@@ -171,7 +171,11 @@
 	&__chatting {
 		width: 100%;
 		height: 80%;
-		@include flexCenter(column, flex-start, center);
+		@include flexCenter(column, unset, flex-start);
+		padding: 2.75rem 0 0 0;
+		// overflow-y: scroll;
+		scrollbar-color: $grey;
+		// gap: 1.5rem;
 	}
 
 	&__current-date {
@@ -184,5 +188,49 @@
 		transform: translateX(-50%);
 		opacity: 0;
 		pointer-events: none;
+	}
+
+	&__current-hour {
+		font-size: $rem-093;
+		line-height: 135%;
+		color: $grey;
+	}
+
+	&__answer-menu {
+		display: flex;
+		flex-direction: column;
+		gap: 0.68rem;
+		opacity: 0;
+		transition: opacity $transition-300;
+	}
+
+	&__answer {
+		@include flexStart(row);
+		gap: 0.81rem;
+	}
+
+	&__current-answer {
+		@include flexStart;
+		gap: 0.5rem;
+		opacity: 0;
+		transition: opacity $transition-300;
+	}
+
+	&__text-answer,
+	&__input-text {
+		max-width: 33.81rem;
+		padding: 1rem 1.37rem 1rem 1.37rem;
+		background-color: $white;
+		border-radius: 0.75rem;
+
+		font-size: $rem-1;
+		line-height: 145%;
+		color: $main;
+	}
+
+	&__input-message {
+		@include flexStart(column, flex-end);
+		margin-left: auto;
+		gap: 0.5rem;
 	}
 }
