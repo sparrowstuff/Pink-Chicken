@@ -10,26 +10,76 @@
 
 	&__main {
 		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		justify-content: space-between;
-		align-items: center;
+		@include flexCenter(row, center, space-between);
 		gap: 4.06rem;
 
-		@media (max-width: 75rem) {
+		@media (max-width: 74.06rem) {
 			gap: 4vw;
 		}
 
-		@media (max-width: 68.75rem) {
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(2, 1fr);
+		@media (max-width: 70.93rem) {
+			flex-direction: column;
+			gap: 1.62rem;
+			align-items: flex-start;
 		}
 
-		@media (max-width: 37.5rem) {
-			grid-template-columns: 1fr;
-			grid-template-rows: unset;
+		@media (max-width: 41.87rem) {
 			gap: 1.25rem;
-			align-items: start;
+		}
+	}
+
+	&__inner-links {
+		@include flexCenter(row, center, space-between);
+		gap: 6.62rem;
+
+		@media (max-width: 77.18rem) {
+			gap: 4vw;
+		}
+
+		@media (max-width: 41.87rem) {
+			gap: 1.25rem;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__additional-links {
+		@include flexCenter(row, center, space-between);
+		gap: 4.06rem;
+
+		@media (max-width: 77.18rem) {
+			gap: 4vw;
+		}
+
+		@media (max-width: 70.93rem) {
+			flex-direction: row-reverse;
+			gap: 8vw;
+		}
+
+		@media (max-width: 41.87rem) {
+			flex-direction: column;
+			gap: 1.25rem;
+			align-items: flex-start;
+		}
+	}
+
+	&__inner-options-block {
+		@include flexCenter(row, center, space-between);
+		gap: 4.06rem;
+
+		@media (max-width: 77.18rem) {
+			gap: 4vw;
+		}
+
+		@media (max-width: 70.93rem) {
+			flex-direction: row-reverse;
+			gap: 8vw;
+		}
+
+		@media (max-width: 41.87rem) {
+			flex-direction: column-reverse;
+			gap: 1.25rem;
+			align-items: flex-start;
 		}
 	}
 

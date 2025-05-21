@@ -762,7 +762,7 @@ footer {
 }
 @media (max-width: 50rem) {
   .aside-menu__main {
-    padding: 1.87rem 1.25rem 2rem 1.25rem;
+    padding: 1.87rem 1.25rem 0 1.25rem;
     align-items: unset;
   }
 }
@@ -1447,29 +1447,96 @@ footer {
 }
 .footer__main {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 4.06rem;
 }
-@media (max-width: 75rem) {
+@media (max-width: 74.06rem) {
   .footer__main {
     gap: 4vw;
   }
 }
-@media (max-width: 68.75rem) {
+@media (max-width: 70.93rem) {
   .footer__main {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    flex-direction: column;
+    gap: 1.62rem;
+    align-items: flex-start;
   }
 }
-@media (max-width: 37.5rem) {
+@media (max-width: 41.87rem) {
   .footer__main {
-    grid-template-columns: 1fr;
-    grid-template-rows: unset;
     gap: 1.25rem;
-    align-items: start;
+  }
+}
+.footer__inner-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6.62rem;
+}
+@media (max-width: 77.18rem) {
+  .footer__inner-links {
+    gap: 4vw;
+  }
+}
+@media (max-width: 41.87rem) {
+  .footer__inner-links {
+    gap: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.footer__additional-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4.06rem;
+}
+@media (max-width: 77.18rem) {
+  .footer__additional-links {
+    gap: 4vw;
+  }
+}
+@media (max-width: 70.93rem) {
+  .footer__additional-links {
+    flex-direction: row-reverse;
+    gap: 8vw;
+  }
+}
+@media (max-width: 41.87rem) {
+  .footer__additional-links {
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+}
+.footer__inner-options-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4.06rem;
+}
+@media (max-width: 77.18rem) {
+  .footer__inner-options-block {
+    gap: 4vw;
+  }
+}
+@media (max-width: 70.93rem) {
+  .footer__inner-options-block {
+    flex-direction: row-reverse;
+    gap: 8vw;
+  }
+}
+@media (max-width: 41.87rem) {
+  .footer__inner-options-block {
+    flex-direction: column-reverse;
+    gap: 1.25rem;
+    align-items: flex-start;
   }
 }
 .footer__mail-link, .footer__privacy-policy {
