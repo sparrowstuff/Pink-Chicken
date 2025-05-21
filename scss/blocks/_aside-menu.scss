@@ -19,16 +19,11 @@
 
 	&__main {
 		padding: 1.75rem 1.31rem 1.25rem 1.25rem;
-		@include flexStart;
+		@include flexStart(column, unset);
 		gap: 1.87rem;
-
-		// @media (max-width: $vp-tablet) {
-		// 	width: 100%;
-		// }
 
 		@media (max-width: $vp-tablet) {
 			gap: 1.25rem;
-			// width: 100%;
 		}
 
 		@media (max-width: 50rem) {
@@ -71,7 +66,6 @@
 
 	&__empty-text {
 		font-weight: 500;
-		// font-size: $rem-1;
 		line-height: 145%;
 		text-align: center;
 

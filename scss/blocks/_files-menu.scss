@@ -18,7 +18,6 @@
 		gap: 0.87rem;
 		width: 87%;
 		display: none;
-		// padding: 0.75rem 0 0 0;
 
 		@media (max-width: $vp-tablet) {
 			width: 50%;
@@ -48,7 +47,6 @@
 		@include flexCenter(row, center, space-between);
 		gap: 0.62rem;
 		width: 100%;
-		// max-width: 18.43rem;
 		position: relative;
 
 		#{$root}__open-icon {

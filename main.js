@@ -182,7 +182,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const awaitingPlan = document.querySelectorAll('.media-files__awaiting-plan')
 	const readyPlan = document.querySelectorAll('.media-files__current-plan')
-
 	const addedIcon = document.querySelectorAll('.files-menu__added-icon')
 
 	window.addEventListener('load', function () {
