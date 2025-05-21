@@ -16,6 +16,11 @@
 	transition: background-color $transition-300, color $transition-300,
 		transform $transition-300;
 
+	&:hover,
+	&:focus-visible {
+		background-color: $blue;
+	}
+
 	&--account {
 		background-color: $white;
 		border-radius: 50%;
@@ -43,6 +48,11 @@
 		width: 1.5rem;
 		height: 1.5rem;
 		padding: unset;
+
+		&:hover,
+		&:focus-visible {
+			background-color: transparent;
+		}
 	}
 
 	&__open-icon {
@@ -66,10 +76,21 @@
 		font-size: $rem-093;
 		line-height: 100%;
 		color: $pink;
+
+		&:hover,
+		&:focus-visible {
+			background-color: unset;
+			color: $blue;
+		}
 	}
 
 	&--blue {
 		background-color: $blue;
+
+		&:hover,
+		&:focus-visible {
+			background-color: $pink;
+		}
 	}
 
 	&--chat {
@@ -96,5 +117,14 @@
 		&:focus-visible {
 			color: $pink;
 		}
+	}
+
+	&--language {
+		width: unset;
+		height: unset;
+		color: $grey;
+
+		font-size: $rem-093;
+		line-height: 145%;
 	}
 }

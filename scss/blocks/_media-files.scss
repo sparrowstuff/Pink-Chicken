@@ -70,6 +70,12 @@
 		transition: opacity $transition-300;
 	}
 
+	&__current-text {
+		@media (max-width: 37.5rem) {
+			font-size: $rem-087;
+		}
+	}
+
 	&__add-file-btn {
 		margin-left: auto;
 	}
@@ -82,30 +88,6 @@
 
 		#{$root}__current-plan {
 			bottom: 0.5rem;
-
-			@media (max-width: $vp-tablet) {
-				bottom: 0;
-			}
-
-			// @media (max-width: 43rem) {
-			// 	bottom: 0;
-			// }
-
-			// @media (max-width: 40.62rem) {
-			// 	bottom: 0;
-			// }
-
-			@media (max-width: 48.81rem) {
-				bottom: 0.5rem;
-			}
-
-			@media (max-width: 36.25rem) {
-				bottom: 0.2rem;
-			}
-
-			@media (max-width: 33.25rem) {
-				bottom: 0.5rem;
-			}
 		}
 	}
 
@@ -119,27 +101,14 @@
 			bottom: 0.5rem;
 
 			@media (max-width: $vp-tablet) {
-				bottom: 0;
+				bottom: 3%;
 			}
 
-			// @media (max-width: 43rem) {
-			// 	bottom: 0;
-			// }
-
-			// @media (max-width: 40.62rem) {
-			// 	bottom: 0;
-			// }
-
-			@media (max-width: 48.81rem) {
-				bottom: 0.5rem;
+			@media (max-width: 48.75rem) {
+				bottom: 10%;
 			}
 
-			@media (max-width: 36.25rem) {
-				bottom: 0.2rem;
-			}
-
-			@media (max-width: 33.25rem) {
-				bottom: 0.5rem;
+			@media (max-width: 33.18rem) {
 			}
 		}
 	}

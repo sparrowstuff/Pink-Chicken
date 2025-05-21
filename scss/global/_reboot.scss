@@ -2,10 +2,12 @@
 *::after,
 *::before {
 	box-sizing: border-box;
+	// outline: 4px solid black;
 }
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
@@ -25,13 +27,13 @@ body {
 	}
 }
 
-main {
-	flex-grow: 1;
-	padding: 0;
-	margin: 0 auto;
-	max-width: 100vw;
-	height: 100vh;
-}
+// main {
+// 	flex-grow: 1;
+// 	padding: 0;
+// 	margin: 0 auto;
+// 	max-width: 100vw;
+// 	height: 100vh;
+// }
 
 img {
 	display: block;
@@ -68,4 +70,8 @@ ol {
 
 button {
 	cursor: pointer;
+}
+
+footer {
+	margin-top: auto;
 }

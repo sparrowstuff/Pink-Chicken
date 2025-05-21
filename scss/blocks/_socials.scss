@@ -1,0 +1,28 @@
+.socials {
+	@include flexCenter(row);
+	gap: 0.75rem;
+	$root: &;
+
+	@media (max-width: 46.25rem) {
+		grid-row: 3/4;
+		justify-content: unset;
+	}
+
+	@media (max-width: 37.5rem) {
+		grid-row: 5;
+	}
+
+	&__telegram-link,
+	&__whatsapp-link {
+		&:hover,
+		&:focus-visible {
+			#{$root}__icon {
+				scale: 1.2;
+			}
+		}
+	}
+
+	&__icon {
+		transition: scale $transition-300;
+	}
+}

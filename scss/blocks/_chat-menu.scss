@@ -2,7 +2,7 @@
 	min-height: 44.31rem;
 	height: 100%;
 	background-color: $white;
-	padding: 1.75rem 1.75rem 1.75rem 1.75rem;
+	padding: 1.5rem 1.75rem 1.75rem 1.75rem;
 	border-radius: 1.25rem;
 	width: 100%;
 	box-shadow: 0px 0px 30px 0px $main-08;
@@ -108,14 +108,15 @@
 		height: 100%;
 		min-height: 36.12rem;
 
-		@media (max-width: 34.68rem) {
-			height: 45.62rem;
-		}
+		// @media (max-width: 34.68rem) {
+		// height: 45.62rem;
+		// }
 
 		@media (max-width: 31.25rem) {
 			width: 100vw;
 			padding: 1.87rem 1.25rem 1.87rem 1.25rem;
 			border-radius: unset;
+			min-height: 43.12rem;
 		}
 	}
 
@@ -128,6 +129,11 @@
 		@media (max-width: 50rem) {
 			width: 11.25rem;
 			height: 11.43rem;
+		}
+
+		@media (max-width: 31.25rem) {
+			width: 8.12rem;
+			height: 8.25rem;
 		}
 	}
 
@@ -148,14 +154,10 @@
 
 	&__btn-block {
 		position: absolute;
-		bottom: 10.25rem;
+		bottom: 9.25rem;
 		left: 1.25rem;
 		@include flexCenter(row);
 		gap: 0.75rem;
-
-		@media (max-width: 50rem) {
-			bottom: 9.25rem;
-		}
 
 		@media (max-width: 34.68rem) {
 			flex-direction: column-reverse;
@@ -172,6 +174,13 @@
 	&__order-media-btn,
 	&__order-report-btn {
 		min-height: 2.68rem;
+
+		@media (max-width: 37.5rem) {
+			min-height: 2.56rem;
+			font-size: $rem-087;
+			min-width: 9.56rem;
+			padding: 0.75rem 1rem 0.75rem 1rem;
+		}
 	}
 
 	&__submit-btn-wrapper {
@@ -184,12 +193,12 @@
 
 		@media (max-width: 50rem) {
 			bottom: 3rem;
-			right: 2.5rem;
+			right: 1.5rem;
 		}
 
 		@media (max-width: 31.25rem) {
-			right: 9%;
-			bottom: 4.7rem;
+			right: 8%;
+			bottom: 4.3rem;
 		}
 	}
 

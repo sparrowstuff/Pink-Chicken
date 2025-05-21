@@ -1,0 +1,94 @@
+.footer {
+	padding: 2rem 0 2rem;
+	$root: &;
+	background-color: $grey-light;
+
+	@media (max-width: 31.25rem) {
+		background-color: $white;
+		padding: 3.5rem 0 2rem;
+	}
+
+	&__main {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		justify-content: space-between;
+		align-items: center;
+		gap: 4.06rem;
+
+		@media (max-width: 75rem) {
+			gap: 4vw;
+		}
+
+		@media (max-width: 68.75rem) {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
+
+		@media (max-width: 37.5rem) {
+			grid-template-columns: 1fr;
+			grid-template-rows: unset;
+			gap: 1.25rem;
+			align-items: start;
+		}
+	}
+
+	&__mail-link,
+	&__privacy-policy {
+		@include flexCenter(row);
+		gap: 0.75rem;
+		max-height: 1.5rem;
+
+		&:hover,
+		&:focus-visible {
+			#{$root}__link-text {
+				color: $pink;
+			}
+
+			#{$root}__mail-icon {
+				transform: translateX(0.4rem);
+			}
+		}
+
+		@media (max-width: 37.5rem) {
+			justify-content: unset;
+		}
+	}
+
+	&__mail-link {
+		@media (max-width: 68.75rem) {
+			grid-column: 1/2;
+		}
+	}
+
+	&__mail-icon {
+		transition: transform $transition-300;
+	}
+
+	&__link-text {
+		font-size: $rem-093;
+		line-height: 145%;
+		color: $grey;
+		transition: color $transition-300;
+	}
+
+	&__language-block {
+		@include flexCenter(row);
+		gap: 0.75rem;
+
+		@media (max-width: 37.5rem) {
+			justify-content: unset;
+		}
+	}
+
+	&__language-btn {
+		color: $grey;
+		transition: color $transition-300, scale $transition-300;
+
+		&:hover,
+		&:focus-visible {
+			color: $pink;
+			scale: 1.2;
+		}
+	}
+}

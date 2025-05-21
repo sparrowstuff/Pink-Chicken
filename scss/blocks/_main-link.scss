@@ -23,6 +23,9 @@
 
 	&--footer {
 		color: $grey;
+		#{$root}__pink {
+			color: $grey;
+		}
 
 		&:hover,
 		&:focus-visible {
@@ -34,6 +37,14 @@
 			#{$root}__hicken {
 				color: $main;
 			}
+		}
+
+		@media (max-width: 68.75rem) {
+			width: 13.68rem;
+		}
+
+		@media (max-width: 31.25rem) {
+			width: 11.31rem;
 		}
 	}
 }
